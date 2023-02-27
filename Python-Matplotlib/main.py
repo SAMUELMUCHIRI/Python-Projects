@@ -135,4 +135,3 @@ def plot14():
     plt.grid(color='green',linestyle=':',linewidth=0.5)
 
     plt.show()
-plot14()
