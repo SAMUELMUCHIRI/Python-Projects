@@ -66,4 +66,73 @@ def plot9():
     ypoints=np.array([3,5,7,2,9])
     plt.plot(ypoints,marker='o',ms =15,mec ='#4CAF50',mfc='#4CAF50')
     plt.show()
-plot9()
+
+def plot10():
+    # The function is for formatting the nature of the graph line
+    # basically looking at the references there are two options 
+    #dotted or dashed
+    ypoints=np.array([1,4,2,6,7,9])
+    plt.plot(ypoints,linestyle= "dotted")
+    #line stye can be shortformed as ls and dotted as : full colons,dashed as a pair of dashes
+    plt.show()
+
+def plot11():
+    ''' the function contains syntax for line editing , in that referring to its width colour 
+    or even adding multiple lines '''
+    ypoints=np.array([1,4,2,6,7,9])
+    ypoints2=np.array([3,5,7,2,9])
+    #here you can add multiple lines as shown below
+    plt.plot(ypoints,color="red")
+    #You can also adjust the line width as seeen
+    plt.plot(ypoints2,color="green",linewidth="20")
+    plt.show()
+def plot12():
+    ''' labeling axis is important
+    and also including the title '''
+    #first considering axis
+    x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+    y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+    plt.plot(x, y)
+    #adding the title and specifying its location by adding loc
+    plt.title("Sports Watch Data",loc='left')
+    plt.xlabel("Average Pulse")
+    plt.ylabel("Calorie Burnage")
+
+    plt.show()
+def plot13():
+    ''' labeling axis is important
+    and also including the title '''
+    #first considering axis
+    x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+    y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+    plt.plot(x, y)
+    #adding the title and specifying its location by adding loc
+    plt.title("Sports Watch Data",loc='left')
+    plt.xlabel("Average Pulse")
+    plt.ylabel("Calorie Burnage")
+
+    
+    #show grid
+    plt.grid()
+
+    plt.show()
+def plot14():
+    #the function clearly depicts how to specify which grid lines are to be shown
+    x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+    y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+    plt.plot(x, y)
+    #adding the title and specifying its location by adding loc
+    plt.title("Sports Watch Data",loc='left')
+    plt.xlabel("Average Pulse")
+    plt.ylabel("Calorie Burnage")
+
+    
+    #show grid on x axis
+    #  also getting creative with the grid by adding line patterns and line size and color 
+    plt.grid(color='green',linestyle=':',linewidth=0.5)
+
+    plt.show()
+plot14()
