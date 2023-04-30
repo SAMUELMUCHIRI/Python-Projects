@@ -16,19 +16,27 @@ def chckInt2(number):
             print('Procedding to request')
         else:
             print('enter valid number')
+            
     except ValueError:
         print('enter any of the numbers shown')
 def NewAdmission():
-    count=0
-    name=input('Students Name')
-    age=input("Age")
+    count=input("assign Adm ")
+    name=input('Students Name   ')
+    age=input("Age  ")
     chckInt(age)
     
-    standard=input("Enter Class")
-    path=os.getcwd
-    with open('admisson.csv','w' , newline='') as file:
-        writer=csv.writer(file)
-        writer.writerow([ name, age,standard])
+    standard=input("Enter Class ")
+    hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\admisson.txt','a')
+    helloContent=hellofile.write(count+'    '+name+'        '+age+'     '+standard+"\n")
+
+    print(helloContent)
+    hellofile.close()
+
+def ChckClsandPerf():
+        hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\admisson.txt','a')
+        
+
+
               
 
  
@@ -39,10 +47,26 @@ print(''' **********************************************************************
                                   HARTI PRIMARY SCHOOL
                                   P.O. BOX 432 GATUNDU  
                 
-                WELCOME 
-                  Here is our catalogue
-                  1:Admitting new student
-                  2:Check class teacher and perfomance
-                  3:School transfer  ''')
+                            WELCOME 
+                               Here is our catalogue
+                             1:Admitting new student
+                             2:Check class teacher and perfomance
+                             3:School transfer  ''')
 query1=input("Service Number")
-NewAdmission()
+try:
+    r=int(query1)
+    if 0<r<4 :
+        if r==1:
+           print('Procedding to request ... 1')
+           NewAdmission()
+        elif r==2:
+            print('Procedding to request ... 2')
+        else:
+            print('Procedding to request ... 3')
+        
+    else:
+        print('enter valid number')
+except ValueError:
+    print('enter any of the numbers shown')
+
+

@@ -1,0 +1,4 @@
+Admission	Name		Age	Standard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+001    Winiie Njeri        8     1
+002    Casey Njoki        12     7
