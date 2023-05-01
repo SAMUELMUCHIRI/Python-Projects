@@ -31,8 +31,35 @@ def NewAdmission():
 
     print(helloContent)
     hellofile.close()
-
+#checking class teacher and performance
 def ChckClsandPerf():
+    number=input("enter class of student")
+    try:
+        r=int(number)
+        if 0<r<9 :
+            print('Procedding to request')
+            if r==1:
+               hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class1.txt')
+                
+            elif  r==2:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class2.txt')      
+            elif  r==3:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class3.txt')              
+            elif  r==4:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class4.txt')      
+            elif  r==5:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class5.txt')      
+            elif  r==6:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class6.txt')      
+            elif  r==7:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class7.txt')      
+            else:
+                hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\class8.txt')
+        else:
+            print('enter valid number')
+            
+    except ValueError:
+        print('enter any of the numbers shown')
         hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\admisson.txt','a')
         
 
@@ -52,17 +79,18 @@ print(''' **********************************************************************
                              1:Admitting new student
                              2:Check class teacher and perfomance
                              3:School transfer  ''')
-query1=input("Service Number")
+query1=input("Service Number    ")
 try:
     r=int(query1)
     if 0<r<4 :
         if r==1:
-           print('Procedding to request ... 1')
+           print('      Procedding to request ... 1')
            NewAdmission()
         elif r==2:
-            print('Procedding to request ... 2')
+            print('     Procedding to request ... 2')
+            ChckClsandPerf()
         else:
-            print('Procedding to request ... 3')
+            print('     Procedding to request ... 3')
         
     else:
         print('enter valid number')
