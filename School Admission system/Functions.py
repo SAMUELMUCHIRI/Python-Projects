@@ -1,4 +1,4 @@
-import csv ,os
+import csv ,os,time
 import pandas as pd
 count=0
 
@@ -34,11 +34,19 @@ def NewAdmission():
 #checking class teacher and performance
 def RegisterClassT():
     print('Registering class Teacher write cl\'class number' 'for example class 1  is written like cl1' )
-    csvframe=csv.writer('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\result.csv',sep=',')
-    classTeacher_name=input('Class Teacher name')
-    Class_number=input('input class number')
+    Myfile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\ClassTeacher.csv','a')
+    csvframe=csv.writer(Myfile)
+    classTeacher_name=str(input('Class Teacher name'))
+    Class_number=str(input('input class number'))
     listclass=[classTeacher_name,Class_number]
     csvframe.writerow(listclass)
+    #csvframe.close()
+def checkClass(p):
+    csvdf=pd.read_csv('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\ClassTeacher.csv')
+    for row in csvdf:
+        for i in row:
+            if i==p:
+                print(row)
 
 
 
@@ -87,7 +95,7 @@ print(''' **********************************************************************
                             WELCOME 
                                Here is our catalogue
                              1:Admitting new student
-                             2:Check class teacher and perfomance
+                             2:Check or Register class teacher
                              3:School transfer  ''')
 query1=input("Service Number    ")
 try:
@@ -98,7 +106,36 @@ try:
            NewAdmission()
         elif r==2:
             print('     Procedding to request ... 2')
-            ChckClsandPerf()
+            time.sleep(2)
+            print('''for : >Check class Teacher Enter 1
+                           >Register class Teacher Enter 2  ''')
+            Resp=input('Check class Teacher ')
+            try:
+                p=int(Resp)
+                if 0<p<3:
+                    if p==1:
+                        print('''To check class Teacher input class teacher\'s  
+                                  class like for class one the class number is 1''')
+                        time.sleep(2)
+                        clp=input('Class number')
+                        try:
+                            f=int(clp)
+                            if 0<f<9:
+                                o=str(f)
+                                p=('cl'+o)
+                                print(checkClass(p))
+
+                            else:
+                                print('Enter any number within the valid range')
+                        except ValueError:
+                            print('Enter a  number')   
+
+                    else:
+                        print('Registering Class Teacher')
+                        RegisterClassT()
+            except ValueError:
+                print('Enter a  number')               
+            
         else:
             print('     Procedding to request ... 3')
         
