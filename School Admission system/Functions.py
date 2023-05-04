@@ -32,6 +32,16 @@ def NewAdmission():
     print(helloContent)
     hellofile.close()
 #checking class teacher and performance
+def RegisterClassT():
+    print('Registering class Teacher write cl\'class number' 'for example class 1  is written like cl1' )
+    csvframe=csv.writer('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\result.csv',sep=',')
+    classTeacher_name=input('Class Teacher name')
+    Class_number=input('input class number')
+    listclass=[classTeacher_name,Class_number]
+    csvframe.writerow(listclass)
+
+
+
 def ChckClsandPerf():
     number=input("enter class of student")
     try:
