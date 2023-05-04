@@ -42,11 +42,13 @@ def RegisterClassT():
     csvframe.writerow(listclass)
     #csvframe.close()
 def checkClass(p):
-    csvdf=pd.read_csv('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\ClassTeacher.csv')
-    for row in csvdf:
-        for i in row:
-            if i==p:
-                print(row)
+    with open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\clssteacherPerf\\ClassTeacher.csv') as csvfile:
+        readobj=csv.reader(csvfile)
+        for row in readobj:
+            for i in row:
+                if i==p:
+                    print(row)
+   
 
 
 
@@ -107,17 +109,19 @@ try:
         elif r==2:
             print('     Procedding to request ... 2')
             time.sleep(2)
-            print('''for : >Check class Teacher Enter 1
-                           >Register class Teacher Enter 2  ''')
-            Resp=input('Check class Teacher ')
+            print('''   
+                        >Check class Teacher Enter 1
+                        >Register class Teacher Enter 2  ''')
+            Resp=input('Enter Choice    ')
             try:
                 p=int(Resp)
                 if 0<p<3:
                     if p==1:
-                        print('''To check class Teacher input class teacher\'s  
+                        print('''
+                                 To check class Teacher input class teacher\'s  
                                   class like for class one the class number is 1''')
                         time.sleep(2)
-                        clp=input('Class number')
+                        clp=input('Class number     ')
                         try:
                             f=int(clp)
                             if 0<f<9:
