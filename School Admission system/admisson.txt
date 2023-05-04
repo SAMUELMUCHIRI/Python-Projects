@@ -3,9 +3,6 @@ Admission	Name		Age	Standard
 001    Winiie Njeri        8     cl1
 002    Casey Njoki        12     cl7
 003    Erik Njenga        13     cl8
-004    Winnie Wanjiru        1   cl1
+004    Winnie Wanjiru       11   cl1
 005    Sharon Njambi        13     cl7
 006    Kingley Coman        12     cl6
-007    Shanice Njeri        11     cl6
-& C:/Users/USER/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/USER/Desktop/site/Python-Projects/School Admission system/Functions.py"    & C:/Users/USER/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/USER/Desktop/site/Python-Projects/School Admission system/Functions.py"        & C:/Users/USER/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/USER/Desktop/site/Python-Projects/School Admission system/Functions.py"     & C:/Users/USER/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/USER/Desktop/site/Python-Projects/School Admission system/Functions.py"
-008    John Gitau        10     cl5
