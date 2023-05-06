@@ -21,14 +21,18 @@ def chckInt2(number):
     except ValueError:
         print('enter any of the numbers shown')
 def NewAdmission():
+    
+    
+    
+    hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\admisson.csv','a',newline='')
+    hello=csv.writer(hellofile,lineterminator='\n')
     count=input("assign Adm ")
     name=input('Students Name   ')
+    standard=input("Enter Class ")
     age=input("Age  ")
     chckInt(age)
-    
-    standard=input("Enter Class ")
-    hellofile=open('C:\\Users\\USER\\Desktop\\site\\Python-Projects\\School Admission system\\admisson.txt','a')
-    helloContent=hellofile.write(count+'    '+name+'        '+age+'     '+standard+"\n")
+    listclass_1=[count,name,age,standard]
+    hello.writerow(listclass_1)
 
     #print(helloContent)
     print('Student is Regstered')
@@ -121,6 +125,7 @@ def mainprogram():
                             >to exit enter 3 >
                             --------------------'''))
                 if p==1:
+
                     NewAdmission()
                 elif p==2:
                     mainprogram()

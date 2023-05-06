@@ -1,8 +1,0 @@
-Admission	Name		Age	Standard
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-001    Winiie Njeri        8     cl1
-002    Casey Njoki        12     cl7
-003    Erik Njenga        13     cl8
-004    Winnie Wanjiru       11   cl1
-005    Sharon Njambi        13     cl7
-006    Kingley Coman        12     cl6
